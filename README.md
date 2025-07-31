@@ -22,12 +22,12 @@ $ python app.py
 ## API Endpoints
 | HTTP Verb | Endpoint | Action |
 | --- | --- | --- |
-| GET | /register | Displays the user registration page. |
-| POST | /register | Handles user registration submission. |
-| GET | /login | Displays the user login page. |
-| POST | /login | Handles user login submission. |
-| GET | /dashboard | Displays the user's personal dashboard. |
-| GET | /logout | Clears login status, and redirects to the login page. |
+| `GET` | `/register` | Displays the user registration page. |
+| `POST` | `/register` | Handles user registration submission. |
+| `GET` | `/login` | Displays the user login page. |
+| `POST` | `/login` | Handles user login submission. |
+| `GET` | `/dashboard` | Displays the user's personal dashboard. |
+| `GET` | `/logout` | Clears login status, and redirects to the login page. |
 
 ## Tech Stacks
 - Backend Framework: Flask
