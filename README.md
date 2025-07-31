@@ -21,6 +21,7 @@ $ python app.py
 
 ## API Endpoints
 | HTTP Verb | Endpoint | Action |
+| --- | --- | --- |
 | GET | /register | Displays the user registration page. |
 | POST | /register | Handles user registration submission. |
 | GET | /login | Displays the user login page. |
