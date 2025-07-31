@@ -6,6 +6,11 @@ from .models import User, db
 bp = Blueprint("auth", __name__)
 
 
+@bp.route("/")
+def home():
+    return redirect(url_for("auth.login"))
+
+
 @bp.route("/register", methods=["GET", "POST"])
 def register():
     """
