@@ -1,6 +1,5 @@
 from flask import Flask, redirect, url_for
 from auth.routes import bp
-
 from auth.models import db
 
 

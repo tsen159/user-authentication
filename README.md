@@ -6,17 +6,22 @@
 - Password Security: Password hashing and verification using Werkzeug.
 - User Logout: Ends the user session safely.
 - Form Validation: Manages form data using WTForms and Flask-WTF.
+- Test: Unit test and integration test using Pytest
 
 
 ## Quick Start
 1. Create an environment with Python 3.10
 2. Install all dependencies
 ```
-$ pip install -r requirements.txt
+pip install -r requirements.txt
 ```
-3. Run the app
+3. Run the app by
 ```
-$ python app.py
+python app.py
+```
+4. (Optional) Run test by
+```
+pytest
 ```
 
 ## API Endpoints
@@ -34,10 +39,12 @@ $ python app.py
 - ORM: Flask-SQLAlchemy
 - Form Validation: WTForms, Flask-WTF
 - Frontend: HTML
+- Test: Pytest
 
 
 ## Reference
-- Usage of Flask-WTF: https://hackmd.io/@shaoeChen/ByofdR1XG
-- Usage of Werkzeug: https://reurl.cc/MzRv7n
-- Using Pytest on Flask: https://hackmd.io/@payon/S1OixvoN2
+- Flask-WTF: https://hackmd.io/@shaoeChen/ByofdR1XG
+- Flask-SQLAlchemy: https://github.com/pallets-eco/flask-sqlalchemy
+- Werkzeug: https://reurl.cc/MzRv7n
+- Pytest on Flask: https://hackmd.io/@payon/S1OixvoN2
 

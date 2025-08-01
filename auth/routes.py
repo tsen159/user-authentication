@@ -46,7 +46,7 @@ def login():
             return redirect(url_for("auth.dashboard"))
         else:
             flash(
-                "Login Unsuccessful. Please check your username or password.", "danger"
+                "Login unsuccessful. Please check your username or password.", "danger"
             )
     return render_template("login.html", form=form)
 
@@ -69,5 +69,29 @@ def dashboard():
     if "user_id" not in session:
         flash("You need to log in first.", "warning")
         return redirect(url_for("auth.login"))
-    user = User.query.get(session["user_id"])
+    user = db.session.get(User, session["user_id"])
     return render_template("dashboard.html", username=user.username)  # type: ignore
+
+
+# @bp.route("/reset-password", methods=["GET", "POST"])
+# def reset_password():
+#     """
+#     Route for resetting the user's password.
+#     """
+#     if "user_id" not in session:
+#         flash("You need to log in first.", "warning")
+#         return redirect(url_for("auth.login"))
+
+#     user = User.query.get(session["user_id"])
+#     if not user:
+#         flash("User not found.", "danger")
+#         return redirect(url_for("auth.login"))
+
+#     form = ResetPasswordForm()
+#     if form.validate_on_submit(): # POST
+#         user.set_password(form.password.data)
+#         db.session.commit()
+#         flash("Your password has been updated!", "success")
+#         return redirect(url_for("auth.dashboard"))
+
+#     return render_template("reset_password.html", form=form)
